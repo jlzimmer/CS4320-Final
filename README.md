@@ -1,14 +1,19 @@
 # Not Your Daddy's Final Project
 ## CS 4320, University of Missouri, Summer 2018
----
-This software generates a block of CSS code that represents a color scheme based on a color that the user picks using the JScolor plugin. Built using Django, a Python web framework.
----
+***
+This web app generates a block of CSS code that represents a color scheme based on a color that the user picks using the JScolor plugin.
+***
 #### Team Members
 - Jacob Zimmer (jlz6w7, Scrum Master)
 - Scott Watkins (watkinssco)
 - Skyler Gunn (sig97)
 - Zach Watson (watsonzm)
----
+***
+#### Files
+`/` 
+`/JScolor` is all files pertaining to the JavaScript color picker utility used in our project (more information below)
+`/utilities` contains all PHP files for executing back-end functions
+***
 #### JScolor - JavaScript Color Picker
 http://jscolor.com  
 For open source use: GPLv3  

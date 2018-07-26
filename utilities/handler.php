@@ -3,7 +3,7 @@
     $mode = empty($_POST['mode']) ? '' : $_POST['mode'];
     $offset = intval(empty($_POST['offset']) ? 0 : $_POST['offset']);
 
-    if ($offset < 0 || $offset > 50) {
+    if ($offset < -99 || $offset > 99) {
         header("Location: ../index.php?result=invalidOffset");
         exit;
     }
@@ -20,7 +20,7 @@
             $palette = monochrome($color, $offset);
             break;
         case 'comp':
-            $palette = compliments($color, $offset);
+            $palette = compound($color, $offset);
             break;
         case 'tri':
             $palette = triad($color, $offset);

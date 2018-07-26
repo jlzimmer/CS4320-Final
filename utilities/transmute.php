@@ -4,30 +4,164 @@
     */
 
     function monochrome($color, $offset) {
-        $hsl = translate($color);
+        $pure = toHSL($color);
 
+        $tint = [
+            "hue" => $pure["hue"],
+            "sat" => $pure["sat"] + $offset,
+            "lum" => rand($pure["lum"], 100),
+        ];
+        if ($tint["sat"] < 0) {
+            $tint["sat"] = 0;
+        }
+        else if ($tint["sat"] > 100) {
+            $tint["sat"] = 100;
+        }
+        $tint = toHEX($tint);
+
+        $shade = [
+            "hue" => $pure["hue"],
+            "sat" => $pure["sat"] + $offset,
+            "lum" => rand(0, $pure["lum"]),
+        ];
+        if ($shade["sat"] < 0) {
+            $shade["sat"] = 0;
+        }
+        else if ($shade["sat"] > 100) {
+            $shade["sat"] = 100;
+        }
+        $shade = toHEX($shade);
+
+        $palette = [
+            "primary" => $color,
+            "secondary" => $tint,
+            "tertiary" => $shade,
+        ];
+
+        return $palette;
     }
 
-    function compliments($color, $offset) {
-        $hsl = translate($color);
+    function compound($color, $offset) {
+        $pure = toHSL($color);
 
+        $tint = [
+            "hue" => ($pure["hue"] + 150) % 360,
+            "sat" => $pure["sat"] + $offset,
+            "lum" => $pure["lum"],
+        ];
+        if ($tint["sat"] < 0) {
+            $tint["sat"] = 0;
+        }
+        else if ($tint["sat"] > 100) {
+            $tint["sat"] = 100;
+        }
+        $tint = toHEX($tint);
+
+        $shade = [
+            "hue" => ($pure["hue"] + 210) % 360,
+            "sat" => $pure["sat"] + $offset,
+            "lum" => $pure["lum"],
+        ];
+        if ($shade["sat"] < 0) {
+            $shade["sat"] = 0;
+        }
+        else if ($shade["sat"] > 100) {
+            $shade["sat"] = 100;
+        }
+        $shade = toHEX($shade);
+
+        $palette = [
+            "primary" => $color,
+            "secondary" => $tint,
+            "tertiary" => $shade,
+        ];
+
+        return $palette;
     }
 
     function triad($color, $offset) {
-        $hsl = translate($color);
+        $pure = toHSL($color);
 
+        $tint = [
+            "hue" => ($pure["hue"] + 120) % 360,
+            "sat" => $pure["sat"] + $offset,
+            "lum" => $pure["lum"],
+        ];
+        if ($tint["sat"] < 0) {
+            $tint["sat"] = 0;
+        }
+        else if ($tint["sat"] > 100) {
+            $tint["sat"] = 100;
+        }
+        $tint = toHEX($tint);
+
+        $shade = [
+            "hue" => ($pure["hue"] + 240) % 360,
+            "sat" => $pure["sat"] + $offset,
+            "lum" => $pure["lum"],
+        ];
+        if ($shade["sat"] < 0) {
+            $shade["sat"] = 0;
+        }
+        else if ($shade["sat"] > 100) {
+            $shade["sat"] = 100;
+        }
+        $shade = toHEX($shade);
+
+        $palette = [
+            "primary" => $color,
+            "secondary" => $tint,
+            "tertiary" => $shade,
+        ];
+
+        return $palette;
     }
 
     function analogous($color, $offset) {
-        $hsl = translate($color);
+        $pure = toHSL($color);
 
+        $max = rand($pure["lum"], 100);
+        $min = rand(0, $pure["lum"]);
+        $luma = rand($min, $max);
+
+        $tint = [
+            "hue" => ($pure["hue"] + 30) % 360,
+            "sat" => $pure["sat"] + $offset,
+            "lum" => $luma,
+        ];
+        if ($tint["sat"] < 0) {
+            $tint["sat"] = 0;
+        }
+        else if ($tint["sat"] > 100) {
+            $tint["sat"] = 100;
+        }
+        $tint = toHEX($tint);
+
+        $shade = [
+            "hue" => ($pure["hue"] + 330) % 360,
+            "sat" => $pure["sat"] + $offset,
+            "lum" => $luma,
+        ];
+        if ($shade["sat"] < 0) {
+            $shade["sat"] = 0;
+        }
+        else if ($shade["sat"] > 100) {
+            $shade["sat"] = 100;
+        }
+        $shade = toHEX($shade);
+
+        $palette = [
+            "primary" => $color,
+            "secondary" => $tint,
+            "tertiary" => $shade,
+        ];
+
+        return $palette;
     }
 
-    function translate($color) {
+    function toHSL($color) {
         // Hex values converted to decimals and mapped to an array
         $rgb = array_map('hexdec', str_split($color, 2));
-        
-        // Color science math from http://www.niwa.nu/2013/05/math-behind-colorspace-conversions-rgb-hsl/
         $rgb = array_map(function($n) {return round($n/255, 2);}, $rgb);
         
         // Luminance
@@ -73,5 +207,9 @@
         ];
 
         return $hsl;
+    }
+
+    function toHEX($color) {
+
     }
 ?>

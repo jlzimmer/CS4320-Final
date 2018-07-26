@@ -32,8 +32,8 @@
                     H, S, V = <span id="hsv"></span>
                 </div>
                 <div class="form-group">
-                    <label for="offset">Saturation offset:</label>
-                    <input id="offset" name="offset" placeholder="(integers 0-50)">
+                    <label for="offset">Saturation offset (to make your chosen color "pop" more or less):</label>
+                    <input id="offset" name="offset" placeholder="(-99 to 99)">
                 </div>
                 <span>Color palette mode:</span>
                 <div class="form-check">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="mode" id="Radio2" value="comp">
-                    <label class="form-check-label" for="Radio2"> Complimentary</label>
+                    <label class="form-check-label" for="Radio2"> Compound</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="mode" id="Radio3" value="tri">

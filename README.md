@@ -10,11 +10,11 @@ This web app generates a block of CSS code that represents a color scheme based 
 - Zach Watson (watsonzm)
 ***
 #### Files
-`/JScolor` is all files pertaining to the JavaScript color picker utility used in our project (more information below)
-`/utilities` contains all PHP files for executing back-end functions
-`index.php` landing page
-`script.js` interaction logic for front-end pages
-`style.css` modifications to Bootstrap 4.0
+`/JScolor` is all files pertaining to the JavaScript color picker utility used in our project (more information below)  
+`/utilities` contains all PHP files for executing back-end functions  
+`index.php` landing page  
+`script.js` interaction logic for front-end pages  
+`style.css` modifications to Bootstrap 4.0  
 ***
 #### JScolor - JavaScript Color Picker
 http://jscolor.com  

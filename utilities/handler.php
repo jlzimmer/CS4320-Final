@@ -5,10 +5,28 @@
 
     if ($offset < 0 || $offset > 50) {
         header("Location: ../index.php?result=invalidOffset");
+        exit;
     }
 
     if (empty($color) || empty($mode)) {
         header("Location: ../index.php?result=emptyField");
         exit;
+    }
+
+    include 'transmute.php';
+
+    switch ($mode) {
+        case 'mono':
+            $palette = monochrome($color, $offset);
+            break;
+        case 'comp':
+            $palette = compliments($color, $offset);
+            break;
+        case 'tri':
+            $palette = triad($color, $offset);
+            break;
+        case 'analog':
+            $palette = analogous($color, $offset);
+            break;
     }
 ?>

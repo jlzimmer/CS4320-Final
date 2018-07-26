@@ -20,7 +20,8 @@
 
     <body>
         <div class="jumbotron">
-            <!-- Build PHP form here, target "utilities/handler.php" using POST -->
+
+            <!-- Form works with utilities/handler.php -- DO NOT MODIFY -->
             <form action="utilities/handler.php" method="POST">
                 <div class="form-group">
                     <label for="color">Color picker (click to change): </label>

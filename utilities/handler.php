@@ -1,7 +1,7 @@
 <?php
     $color = empty($_POST['color']) ? '' : $_POST['color'];
     $mode = empty($_POST['mode']) ? '' : $_POST['mode'];
-    $offset = intval(empty($_POST['offset']) ? 0 : $_POST['offset'])
+    $offset = intval(empty($_POST['offset']) ? 0 : $_POST['offset']);
 
     if ($offset < 0 || $offset > 50) {
         header("Location: ../index.php?result=invalidOffset");
@@ -13,7 +13,7 @@
         exit;
     }
 
-    include 'transmute.php';
+    require 'transmute.php';
 
     switch ($mode) {
         case 'mono':
@@ -29,4 +29,6 @@
             $palette = analogous($color, $offset);
             break;
     }
+
+    require 'CSSgen.php';
 ?>

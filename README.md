@@ -22,3 +22,5 @@ For open source use: GPLv3
 For commercial use: JSColor Commercial License  
 author: Jan Odvarko  
 version: 2.0.5  
+***
+Additional color science information found [here](http://www.niwa.nu/2013/05/math-behind-colorspace-conversions-rgb-hsl/).

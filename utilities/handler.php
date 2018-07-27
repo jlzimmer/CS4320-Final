@@ -30,5 +30,7 @@
             break;
     }
 
+    var_dump($palette);
+
     require 'CSSgen.php';
 ?>

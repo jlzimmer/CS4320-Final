@@ -30,7 +30,8 @@
             break;
     }
 
-    var_dump($palette);
-
     require 'CSSgen.php';
+
+    $css = generate($palette);
+
 ?>

@@ -13,8 +13,8 @@ This web app generates a block of CSS code that represents a color scheme based 
 `/JScolor` is all files pertaining to the JavaScript color picker utility used in our project (more information below)  
 `/utilities` contains all PHP files for executing back-end functions  
 `index.php` landing page  
+`palette.css` an example of the CSS file that is generated then downloaded to the user's machine  
 `script.js` interaction logic for front-end pages  
-`style.css` modifications to Bootstrap 4.0  
 ***
 #### JScolor - JavaScript Color Picker
 http://jscolor.com  

@@ -65,7 +65,7 @@
     <address>
             Written by <a href="mailto:jlz6w7@mail.missouri.edu">Jacob Zimmer</a>,
                        <a href="mailto:sig972@mail.missouri.edu">Skyler Gunn</a>, 
-                       <a href="mailto:watkinssco@mail.missouri.edu">Scott Watkins</a>, &
+                       <a href="mailto:watkinssco@missouri.edu">Scott Watkins</a>, &
                        <a href="mailto:watsonzm@mail.missouri.edu">Zach Watson</a>
             </address>
     </footer>

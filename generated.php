@@ -11,8 +11,7 @@
 
         <?php
         require '../utilities/handler.php';
-
-        echo $uno;
+        echo $palette["primary"];
         echo $dos;
         echo $tres;
 

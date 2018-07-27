@@ -28,10 +28,18 @@
         case 'analog':
             $palette = analogous($color, $offset);
             break;
-    }
+    } 
 
     require 'CSSgen.php';
 
     $css = generate($palette);
+
+    if(!empty($css)){
+    header("Location: ../generated.php");
+    }
+    else
+    {
+        header("Location: ../index.php?result=ErrorPleaseTryAgain");
+    }
 
 ?>

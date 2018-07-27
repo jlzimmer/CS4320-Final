@@ -1,0 +1,26 @@
+.jumbotron {
+    color: #3C4A3E;
+    background-color: #9FAFA1;
+}
+
+#offset {
+  color: #0089CA;
+}
+
+#header{
+text-align: center;
+background: -webkit-linear-gradient(#0089CA, #068A40);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+padding: 0px 0px 20px 0px;
+
+}
+
+#footer{
+    padding-top:40px;
+    display: block;
+    text-align: center;
+    background-color: #9FAFA1;
+    color: #0089CA;
+}
+

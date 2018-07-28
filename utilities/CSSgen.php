@@ -11,11 +11,13 @@
     background-color: #$uno;
     border-color: #$uno;
 }
+<br>
 .secondary {
     color: #$dos;
     background-color: #$dos;
     border-color: #$dos;
 }
+<br>
 .tertiary {
     color: #$tres;
     background-color: #$tres;

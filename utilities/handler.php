@@ -33,13 +33,17 @@
     require 'CSSgen.php';
 
     $css = generate($palette);
+   // echo "<p background-color: "$palette["primary"]";>";
+    echo $css;
+   // echo "</p>";
+   // sleep(10);
 
-    if(!empty($css)){
+   /* if(!empty($css)){
     header("Location: ../generated.php");
     }
     else
     {
-        header("Location: ../index.php?result=ErrorPleaseTryAgain");
-    }
+   header("Location: ../index.php?result=ErrorPleaseTryAgain");
+    }*/
 
 ?>

@@ -33,22 +33,20 @@
     require 'CSSgen.php';
 
     $css = generate($palette);
-   // echo "<p background-color: "$palette["primary"]";>";
+    
    $first = $palette["primary"];
    $second = $palette["secondary"];
    $third = $palette["tertiary"];
     
-    echo "<p style='background-color: $first; color: $third;'>";
+    echo "<p style='background-color: $first; color: $third; padding: 0px 0px 0px 0px;'>";
     echo $palette["primary"];
     echo "</p>";
-    echo "<br>";
 
-    echo "<p style='background-color: $second; color: $first;'>";
+    echo "<p style='background-color: $second; color: $first; padding: 0px 0px 0px 0px;'>";
     echo $palette["secondary"];
     echo "</p>";
-    echo "<br>";
 
-    echo "<p style='background-color: $third; color: $second;'>";
+    echo "<p style='background-color: $third; color: $second; padding: 0px 0px 0px 0px;'>";
     echo $palette["tertiary"];
     echo "</p>";
 

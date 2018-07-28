@@ -34,11 +34,23 @@
 
     $css = generate($palette);
    // echo "<p background-color: "$palette["primary"]";>";
+   $first = $palette["primary"];
+   $second = $palette["secondary"];
+   $third = $palette["tertiary"];
+    
+    echo "<p style='background-color: $first;'>";
     echo $palette["primary"];
+    echo "</p>";
     echo "<br>";
+
+    echo "<p style='background-color: $second;'>";
     echo $palette["secondary"];
+    echo "</p>";
     echo "<br>";
+
+    echo "<p style='background-color: $third;'>";
     echo $palette["tertiary"];
+    echo "</p>";
 
 
    /* if(!empty($css)){

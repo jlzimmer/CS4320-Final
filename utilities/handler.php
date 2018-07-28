@@ -33,7 +33,7 @@
     require 'CSSgen.php';
 
     $css = generate($palette);
-    
+/*   
    $first = $palette["primary"];
    $second = $palette["secondary"];
    $third = $palette["tertiary"];
@@ -49,14 +49,8 @@
     echo "<p style='background-color: $third; color: $second; padding: 0px 0px 0px 0px;'>";
     echo $palette["tertiary"];
     echo "</p>";
+*/
+    $html = build($css);
 
-
-   /* if(!empty($css)){
-    header("Location: ../generated.php");
-    }
-    else
-    {
-   header("Location: ../index.php?result=ErrorPleaseTryAgain");
-    }*/
-
+    echo $html;
 ?>

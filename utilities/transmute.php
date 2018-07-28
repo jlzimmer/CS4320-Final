@@ -215,7 +215,7 @@
         $rgb = array_map('dechex', $rgb);
         $rgb = array_map(function($n) {return str_pad($n, 2, "0", STR_PAD_LEFT);}, $rgb);
         
-        $hex = $rgb["r"] . $rgb["g"] . $rgb["b"];
+        $hex = strtoupper($rgb["r"] . $rgb["g"] . $rgb["b"]);
         return $hex;
     }
 

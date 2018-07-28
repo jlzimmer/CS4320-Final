@@ -34,9 +34,12 @@
 
     $css = generate($palette);
    // echo "<p background-color: "$palette["primary"]";>";
-    echo $css;
-   // echo "</p>";
-   // sleep(10);
+    echo $palette["primary"];
+    echo "<br>";
+    echo $palette["secondary"];
+    echo "<br>";
+    echo $palette["tertiary"];
+
 
    /* if(!empty($css)){
     header("Location: ../generated.php");

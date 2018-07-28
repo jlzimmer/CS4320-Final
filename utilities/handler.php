@@ -38,17 +38,17 @@
    $second = $palette["secondary"];
    $third = $palette["tertiary"];
     
-    echo "<p style='background-color: $first;'>";
+    echo "<p style='background-color: $first; color: $third;'>";
     echo $palette["primary"];
     echo "</p>";
     echo "<br>";
 
-    echo "<p style='background-color: $second;'>";
+    echo "<p style='background-color: $second; color: $first;'>";
     echo $palette["secondary"];
     echo "</p>";
     echo "<br>";
 
-    echo "<p style='background-color: $third;'>";
+    echo "<p style='background-color: $third; color: $second;'>";
     echo $palette["tertiary"];
     echo "</p>";
 

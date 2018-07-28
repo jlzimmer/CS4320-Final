@@ -33,24 +33,19 @@
     require 'CSSgen.php';
 
     $css = generate($palette);
-/*   
-   $first = $palette["primary"];
-   $second = $palette["secondary"];
-   $third = $palette["tertiary"];
-    
-    echo "<p style='background-color: $first; color: $third; padding: 0px 0px 0px 0px;'>";
-    echo $palette["primary"];
-    echo "</p>";
-
-    echo "<p style='background-color: $second; color: $first; padding: 0px 0px 0px 0px;'>";
-    echo $palette["secondary"];
-    echo "</p>";
-
-    echo "<p style='background-color: $third; color: $second; padding: 0px 0px 0px 0px;'>";
-    echo $palette["tertiary"];
-    echo "</p>";
-*/
     $html = build($css);
-
-    echo $html;
 ?>
+<head>
+    <script type="text/javascript">
+        function send() {
+            document.getElementById("redirect").submit();
+        }
+    </script>
+</head>
+
+<body onload="send()">
+    <form id="redirect" action="../output.php" method="POST">
+        <input type="hidden" id="html" name="html" value="<?php echo $html; ?>">
+        <input type="submit">
+    </form>
+</body>

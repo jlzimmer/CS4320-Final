@@ -26,3 +26,6 @@ author: Jan Odvarko
 version: 2.0.5  
 ***
 Additional color science information found [here](http://www.niwa.nu/2013/05/math-behind-colorspace-conversions-rgb-hsl/).
+
+#### YouTube Link
+https://youtu.be/VIOz_hcOlSA
